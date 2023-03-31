@@ -1,5 +1,11 @@
 # Reconstruction grids
 
+Lewis A. Jones, Mathew M. Domeier
+Universidade de Vigo
+University of Oslo
+
+## Abstract
+
 ## Background & Summary
 
 ## Methods
