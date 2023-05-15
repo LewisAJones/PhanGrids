@@ -1,0 +1,100 @@
+---
+title: H3 resolution comparison
+format: 
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    self-contained: true
+---
+
+Load relevant libraries.
+
+```{r libraries}
+# h3 library
+library(h3jsr)
+# table package
+library(knitr)
+# spatial library
+library(sf)
+```
+
+View the internal `h3jsr` information table.
+
+```{r table}
+kable(h3_info_table)
+```
+
+To get all cells in `h3jsr`, we start by getting the base parent resolution (res = 0). This returns all cell indexes at this resolution.
+
+```{r parent}
+res_0 <- get_res0()
+res_0
+```
+
+From this, we can then request the child cells at various resolutions. Let's get the cell indexes at resolution 3 and 5, which is approximately 100 km and 10 km spacings between cell centroids, respectively.
+
+```{r child}
+res_3 <- get_children(h3_address = res_0, res = 3)
+res_5 <- get_children(h3_address = res_0, res = 5)
+```
+
+This generates lists of length 122 (the number of parent cells) with each element of the list containing a vector of the cell indexes at the desired resolution. As such, we need to extract all centroids from the lists.
+
+```{r unlist}
+res_3 <- unlist(res_3)
+res_5 <- unlist(res_5)
+```
+
+We can then get the centroid coordinates for each cell of our grids.
+
+```{r centroids}
+# Resolution 0
+# Get centroids
+points_0 <- cell_to_point(h3_address = res_0, simple = TRUE)
+# Extract coordinates from sf object
+points_0 <- st_coordinates(points_0)
+# Create data frame
+res_0 <- data.frame(res = 0, h3_address = res_0,
+                    lng = points_0[, "X"], lat = points_0[, "Y"])
+# Resolution 3
+# Get centroids
+points_3 <- cell_to_point(h3_address = res_3, simple = TRUE)
+# Extract coordinates from sf object
+points_3 <- st_coordinates(points_3)
+# Create data frame
+res_3 <- data.frame(res = 3, h3_address = res_3,
+                    lng = points_3[, "X"], lat = points_3[, "Y"])
+# Resolution 5
+# Get centroids
+points_5 <- cell_to_point(h3_address = res_5, simple = TRUE)
+# Extract coordinates from sf object
+points_5 <- st_coordinates(points_5)
+# Create data frame
+res_5 <- data.frame(res = 5, h3_address = res_5,
+                    lng = points_5[, "X"], lat = points_5[, "Y"])
+```
+
+A bit of housekeeping by sorting the dataframes by their h3 address.
+
+```{r housekeeping}
+res_0 <- res_0[order(res_0$h3_address), ]
+res_3 <- res_3[order(res_3$h3_address), ]
+res_5 <- res_5[order(res_5$h3_address), ]
+```
+
+Reducing file size by rounding off coordinates.
+
+```{r filesize}
+res_0[, c("lng", "lat")] <- round(res_0[, c("lng", "lat")], digits = 3)
+res_3[, c("lng", "lat")] <- round(res_3[, c("lng", "lat")], digits = 3)
+res_5[, c("lng", "lat")] <- round(res_5[, c("lng", "lat")], digits = 3)
+```
+
+Save data.
+
+```{r save}
+write.csv(x = res_0, file = "./grids/h3-0.csv", row.names = FALSE)
+write.csv(x = res_3, file = "./grids/h3-3.csv", row.names = FALSE)
+write.csv(x = res_5, file = "./grids/h3-5.csv", row.names = FALSE)
+```
