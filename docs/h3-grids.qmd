@@ -8,6 +8,11 @@ format:
     self-contained: true
 ---
 
+```{r setup, include=FALSE}
+# Set default options
+knitr::opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+```
+
 Load relevant libraries.
 
 ```{r libraries}
