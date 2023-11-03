@@ -14,6 +14,9 @@ To cite this repository:
 
 #### NOTE: All reconstructions files are deposited on the dedicated [Zenodo repository]().
 
+![](figures/grid_plot.png)
+Example of [H3’s discrete global grid system](https://h3geo.org). (a) A H3 global grid at resolution 2 (~316.12 km cell spacing). Land masses are depicted in grey, except for Brazil, which is depicted in purple. The grid is illustrated in an orthographic projection. (b) H3 grids overlaid on Brazil at resolutions 2, 3, and 4, which have an average cell spacing of ~316 km, ~119 km, and ~45 km, respectively. The map illustrates the hierarchical nature of the H3 geospatial indexing system.
+
 ----
 
 ## Data
