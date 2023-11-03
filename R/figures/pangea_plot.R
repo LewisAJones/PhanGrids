@@ -8,6 +8,7 @@
 # Load libraries --------------------------------------------------------
 library(h3jsr)
 library(ggplot2)
+library(ggpubr)
 library(sf)
 library(raster)
 
@@ -33,10 +34,13 @@ xy_rot <- df[, c("lng_200", "lat_200")]
 xy_rot <- na.omit(xy_rot)
 xy_rot <- st_as_sf(x = xy_rot, coords = c("lng_200", "lat_200"), crs = sf::st_crs(4326))
 
+bbox <- st_graticule(crs = st_crs("ESRI:54030"), lat = c(-89.9, 89.9), lon = c(-179.9, 179.9))
+
 modern <- ggplot() +
   geom_sf(data = bb, fill = "lightblue", colour = NA) +
   geom_sf(data = gpm, fill = "darkgrey", colour = "black", alpha = 1) +
   geom_sf(data = xy, fill = "#1B9E77", colour = "black", size = 1, shape = 21) +
+  geom_sf(data = bbox) +
   coord_sf(crs = sf::st_crs("ESRI:54030")) +
   theme_void() +
   theme(
@@ -48,7 +52,7 @@ palaeo <- ggplot() +
   geom_sf(data = bb, fill = "lightblue", colour = NA) +
   geom_sf(data = gpm_rot, fill = "darkgrey", colour = "black", alpha = 1) +
   geom_sf(data = xy_rot, fill = "#1B9E77", colour = "black", size = 1, shape = 21) +
-  #geom_sf(data = grid, fill = NA, colour = "black", alpha = 0.5) +
+  geom_sf(data = bbox) +
   coord_sf(crs = sf::st_crs("ESRI:54030")) +
   theme_void() +
   theme(
