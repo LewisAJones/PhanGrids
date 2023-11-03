@@ -2,7 +2,7 @@
 
 Author(s): [Lewis A. Jones](mailto:LewisA.Jones@outlook.com) and [Mathew Domeier](mailto:mathewd@uio.no)
 
-This repository contains the data and code required to run the analyses and results of the article, "Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions " (Jones and Domeier, 2023). 
+This repository contains the data and code required to generate the materials for the article, "Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions" (Jones and Domeier, 2023). 
 
 To cite the paper: 
 
@@ -10,19 +10,16 @@ To cite the paper:
 
 To cite this repository:
 
-> Jones, L.A. and Domeier, M.M. 2023. Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions. GitHub Repository: https://github.com/LewisAJones/GPM-reconstruction-grids
+> Jones, L.A. and Domeier, M.M. 2023. Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions. GitHub Repository: https://github.com/LewisAJones/PhanGrids.
 
--------
+#### NOTE: All reconstructions files are deposited on the dedicated [Zenodo repository]().
+
+----
 
 ## Data
-All data used in preparation of this article are included in this repository.
 
 * `data/` contains `pbdb_data.csv`, a dataset of fossil collections from [the Palaeobiology Database](https://paleobiodb.org/#/).
-* `data/` contains `resolution_2.RDS`, an example reconstruction file for H3 resolution 2 using the Merdith et al. (2021) Global Plate Model.
-
-NOTE: All reconstructions files are deposited on a dedicated [Zenodo repository]().
-
--------
+* `data/` contains `resolution_2.RDS`, an example reconstruction file (H3 resolution 2) using the Merdith et al. (2021) Global Plate Model.
 
 ## Python
 
@@ -39,13 +36,20 @@ NOTE: All reconstructions files are deposited on a dedicated [Zenodo repository]
 * `python/` contains `make_grids.ipynb`, which provides a Jupyter Notebook documenting the process used to make the reconstruction grids.
 * `python/` contains `look_up.ipynb`, which provides a Jupyter Notebook which can be used to generate reconstructed coordinates for user data from the reconstruction files.
 
--------
-
 ## R
 
 * `R/` contains the subfolder `figures`, which provides the R code used to generate figures for the article.
 * `R/` contains `look_up.R`, which provides an R script which can be used to generate reconstructed coordinates for user data from the reconstruction files.
 
+## References
 
+Matthews, K. J., Maloney, K. T., Zahirovic, S., Williams, S. E., Seton, M., & Müller, R. D. (2016). Global plate boundary evolution and kinematics since the late Paleozoic. Global and Planetary Change, 146, 226–250. https://doi.org/10.1016/j.gloplacha.2016.10.002.
 
- 
+Merdith, A. S., Williams, S. E., Collins, A. S., Tetley, M. G., Mulder, J. A., Blades, M. L., Young, A., Armistead, S. E., Cannon, J., Zahirovic, S., & Müller, R. D. (2021). Extending full-plate tectonic models into deep time: Linking the Neoproterozoic and the Phanerozoic. *Earth-Science Reviews*, 214, 103477. https://doi.org/10.1016/j.earscirev.2020.103477.
+
+Scotese, C. R. (2016). Tutorial: PALEOMAP paleoAtlas for GPlates and the paleoData plotter program: PALEOMAP Project, Technical Report.
+
+Wright, N., Zahirovic, S., Müller, R. D., & Seton, M. (2013). Towards community-driven paleogeographic reconstructions: Integrating open-access paleogeographic and paleobiology data with plate tectonics. *Biogeosciences*, 10, 1529–1541. https://doi.org/10.5194/bg-10-1529-2013.
+
+Torsvik, T. H., & Cocks, L. R. M. (2017). Earth history and palaeogeography.
+
