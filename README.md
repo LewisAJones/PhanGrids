@@ -2,7 +2,7 @@
 
 Author(s): [Lewis A. Jones](mailto:LewisA.Jones@outlook.com) and [Mathew Domeier](mailto:mathewd@uio.no)
 
-This repository contains the data and code required to generate the materials for the article, "Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions" (Jones and Domeier, 2023). 
+This repository contains the data and code required to generate the materials for the article "Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions" (Jones and Domeier, 2023). 
 
 To cite the paper: 
 
@@ -54,5 +54,5 @@ Scotese, C. R. (2016). Tutorial: PALEOMAP paleoAtlas for GPlates and the paleoDa
 
 Wright, N., Zahirovic, S., Müller, R. D., & Seton, M. (2013). Towards community-driven paleogeographic reconstructions: Integrating open-access paleogeographic and paleobiology data with plate tectonics. *Biogeosciences*, 10, 1529–1541. https://doi.org/10.5194/bg-10-1529-2013.
 
-Torsvik, T. H., & Cocks, L. R. M. (2017). Earth history and palaeogeography.
+Torsvik, T. H., & Cocks, L. R. M. (2017). Earth history and palaeogeography. *Cambridge University Press*. https://doi.org/10.1017/9781316225523.
 
