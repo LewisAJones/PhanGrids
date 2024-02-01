@@ -1,10 +1,10 @@
 # Header ----------------------------------------------------------------
-# Project: GPM-reconstruction-grids
+# Project: PhanGrids
 # File name: look_up.R
-# Last updated: 2023-11-03
+# Last updated: 2024-02-01
 # Author: Lewis A. Jones
 # Email: LewisA.Jones@outlook.com
-# Repository: https://github.com/LewisAJones/GPM-reconstruction-grids
+# Repository: https://github.com/LewisAJones/PhanGrids
 # -----------------------------------------------------------------------
 
 # This script provides an example of how to generate palaeocoordinates for
@@ -17,7 +17,7 @@ library(h3jsr)
 # Load table ------------------------------------------------------------
 # Let's use the Merdith et al. (2021) reconstruction file at h3 resolution 
 # 2 for an example
-df <-readRDS(file = "./data/resolution_2.RDS")
+df <- readRDS(file = "./data/resolution_2.RDS")
 
 # Load fossil data ------------------------------------------------------
 # Let's load example fossil collection data from the Paleobiology Database

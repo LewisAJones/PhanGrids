@@ -13,9 +13,9 @@ library(sf)
 library(raster)
 
 # Load data -------------------------------------------------------------
-df <- readRDS("./grids/WR13/resolution_2.RDS")
-gpm <- read_sf("https://gws.gplates.org/reconstruct/static_polygons/?&time=1&model=GOLONKA")
-gpm_rot <- read_sf("https://gws.gplates.org/reconstruct/static_polygons/?&time=200&model=GOLONKA")
+df <- readRDS("./grids/TC16/resolution_2.RDS")
+gpm <- read_sf("https://gws.gplates.org/reconstruct/static_polygons/?&time=1&model=TorsvikCocks2017&anchor_plate_id=1")
+gpm_rot <- read_sf("https://gws.gplates.org/reconstruct/static_polygons/?&time=250&model=TorsvikCocks2017&anchor_plate_id=1")
 # Prepare data ----------------------------------------------------------
 # Set up bounding box
 ras <- raster::raster(res = 5, val = 1)
@@ -30,9 +30,9 @@ xy <- na.omit(xy)
 xy <- st_as_sf(x = xy, coords = c("lng", "lat"), crs = sf::st_crs(4326))
 
 # Reconstructed coordinates
-xy_rot <- df[, c("lng_200", "lat_200")]
+xy_rot <- df[, c("lng_250", "lat_250")]
 xy_rot <- na.omit(xy_rot)
-xy_rot <- st_as_sf(x = xy_rot, coords = c("lng_200", "lat_200"), crs = sf::st_crs(4326))
+xy_rot <- st_as_sf(x = xy_rot, coords = c("lng_250", "lat_250"), crs = sf::st_crs(4326))
 
 bbox <- st_graticule(crs = st_crs("ESRI:54030"), lat = c(-89.9, 89.9), lon = c(-179.9, 179.9))
 

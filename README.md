@@ -1,16 +1,16 @@
-# Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions 
+# PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions
 
 Author(s): [Lewis A. Jones](mailto:LewisA.Jones@outlook.com) and [Mathew Domeier](mailto:mathewd@uio.no)
 
-This repository contains the data and code required to generate the materials for the article "Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions" (Jones and Domeier, 2023). 
+This repository contains the data and code required to generate the materials for the article "PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions" (Jones and Domeier, 2024). 
 
 To cite the paper: 
 
-> Jones, L.A. and Domeier, M.M. 2023. Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions. (TBC).
+> Jones, L.A. and Domeier, M.M. 2024. PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions. (TBC).
 
 To cite this repository:
 
-> Jones, L.A. and Domeier, M.M. 2023. Earth surface evolution: a Phanerozoic gridded dataset of Global Plate Model reconstructions. GitHub Repository: https://github.com/LewisAJones/PhanGrids.
+> Jones, L.A. and Domeier, M.M. 2024. PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions. GitHub Repository: https://github.com/LewisAJones/PhanGrids.
 
 #### NOTE: All reconstructions files are deposited on the dedicated [Zenodo repository](https://zenodo.org/records/10069222).
 
@@ -22,7 +22,7 @@ Example of [H3’s discrete global grid system](https://h3geo.org). (a) A H3 glo
 ## Data
 
 * `data/` contains `pbdb_data.csv`, a dataset of fossil collections from [the Palaeobiology Database](https://paleobiodb.org/#/).
-* `data/` contains `resolution_2.RDS`, an example reconstruction file (H3 resolution 2) using the Merdith et al. (2021) Global Plate Model.
+* `data/` contains `resolution_2.RDS`, an example reconstruction file (H3 resolution 2) using the [Merdith et al. (2021)](https://doi.org/10.1016/j.earscirev.2020.103477) Global Plate Model.
 
 ## Python
 
@@ -52,7 +52,7 @@ Merdith, A. S., Williams, S. E., Collins, A. S., Tetley, M. G., Mulder, J. A., B
 
 Scotese, C. R. (2016). Tutorial: PALEOMAP paleoAtlas for GPlates and the paleoData plotter program: PALEOMAP Project, Technical Report.
 
-Wright, N., Zahirovic, S., Müller, R. D., & Seton, M. (2013). Towards community-driven paleogeographic reconstructions: Integrating open-access paleogeographic and paleobiology data with plate tectonics. *Biogeosciences*, 10, 1529–1541. https://doi.org/10.5194/bg-10-1529-2013.
-
 Torsvik, T. H., & Cocks, L. R. M. (2017). Earth history and palaeogeography. *Cambridge University Press*. https://doi.org/10.1017/9781316225523.
+
+Wright, N., Zahirovic, S., Müller, R. D., & Seton, M. (2013). Towards community-driven paleogeographic reconstructions: Integrating open-access paleogeographic and paleobiology data with plate tectonics. *Biogeosciences*, 10, 1529–1541. https://doi.org/10.5194/bg-10-1529-2013.
 
