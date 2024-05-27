@@ -24,13 +24,13 @@ grid2 <- cell_to_polygon(input = grid2)
 country <- ne_countries(country = "brazil", 
                         returnclass = "sf", scale = "large")
 
+grid2 <- st_crop(grid2, xmin = -90, xmax = 90, ymin = -90, ymax = 90)
+
 globe <- ggplot() +
   geom_sf(data = world, colour = "darkgrey", fill = "darkgrey") +
   geom_sf(data = country, colour = "#7570B3", fill = "#7570B3") +
   geom_sf(data = grid2, fill = NA, colour = "#1B9E77") +
-  #coord_sf(crs= "+proj=ortho +lat_0=0 +lon_0=0") +
-  coord_sf(crs = "+proj=laea +y_0=0 +lon_0=0 +lat_0=0 +ellps=WGS84 +no_defs") +
-  #coord_sf(crs = st_crs("ESRI:54030")) +
+  coord_sf(crs= "+proj=ortho +lat_0=0 +lon_0=0") +
   theme_void() +
   theme(panel.border = element_blank())
 globe

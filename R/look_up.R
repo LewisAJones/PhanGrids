@@ -22,6 +22,8 @@ df <- readRDS(file = "./data/resolution_2.RDS")
 # Load fossil data ------------------------------------------------------
 # Let's load example fossil collection data from the Paleobiology Database
 pbdb <- read.csv(file = "./data/pbdb_data.csv")
+# If the above file is too heavy for your machine, you can use a subset:
+#pbdb <- read.csv(file = "./data/pbdb_data_light.csv")
 
 # Assign h3 address to fossil collection data ---------------------------
 pbdb$h3 <- point_to_cell(input = pbdb[ , c("lng", "lat")], res = 2)
@@ -45,4 +47,3 @@ p_lat <- sapply(1:length(row_match), function(x) df[row_match[x], lat_match[x]])
 coords <- cbind(p_lng, p_lat)
 # Add the coordinates!
 pbdb <- cbind.data.frame(pbdb, coords)
-
