@@ -72,5 +72,8 @@ ggplot(data = benchmark, aes(x = n, y = median, ymin = lci, ymax = uci)) +
 ggsave("./figures/efficiency_graph.png",
        height = 100, width = 100, units = "mm",
        dpi = 600)
+ggsave("./figures/efficiency_graph.pdf",
+       height = 100, width = 100, units = "mm",
+       dpi = 600)
 
  

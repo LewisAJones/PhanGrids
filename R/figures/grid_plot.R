@@ -53,4 +53,5 @@ country <- ggplot() +
 # Save plot -------------------------------------------------------------
 ggarrange(globe, country, labels = "auto")
 ggsave("./figures/grid_plot.png", units = "mm", width = 150, height = 75, dpi = 600)
+ggsave("./figures/grid_plot.pdf", units = "mm", width = 150, height = 75, dpi = 600)
 

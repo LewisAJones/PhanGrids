@@ -64,5 +64,7 @@ palaeo <- ggplot() +
 ggarrange(modern, palaeo, labels = "auto", nrow = 2, font.label = list(size = 30))
 ggsave("./figures/pangea_plot.png", units = "mm", height = 150, width = 150,
        dpi = 600, scale = 2)
+ggsave("./figures/pangea_plot.pdf", units = "mm", height = 150, width = 150,
+       dpi = 600, scale = 2)
 
 
