@@ -1,4 +1,4 @@
-# PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions
+# A Phanerozoic gridded dataset for palaeogeographic reconstructions
 
 Author(s): [Lewis A. Jones](mailto:LewisA.Jones@outlook.com) and [Mathew Domeier](mailto:mathewd@uio.no)
 
@@ -6,11 +6,11 @@ This repository contains the data and code required to generate the materials fo
 
 To cite the paper: 
 
-> Jones, L.A. and Domeier, M.M. 2024. PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions. (TBC).
+> Jones, L.A. and Domeier, M.M. 2024. A Phanerozoic gridded dataset for palaeogeographic reconstructions. (TBC).
 
 To cite this repository:
 
-> Jones, L.A. and Domeier, M.M. 2024. PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions. GitHub Repository: https://github.com/LewisAJones/PhanGrids.
+> Jones, L.A. and Domeier, M.M. 2024. A Phanerozoic gridded dataset for palaeogeographic reconstructions. GitHub Repository: https://github.com/LewisAJones/PhanGrids.
 
 #### NOTE: All reconstructions files are deposited on the dedicated [Zenodo repository](https://zenodo.org/records/10607398).
 
