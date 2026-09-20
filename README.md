@@ -2,17 +2,17 @@
 
 Author(s): [Lewis A. Jones](mailto:LewisA.Jones@outlook.com) and [Mathew Domeier](mailto:mathewd@uio.no)
 
-This repository contains the data and code required to generate the materials for the article "PhanGrids: a Phanerozoic gridded dataset of palaeogeographic reconstructions" (Jones and Domeier, 2024). 
+This repository contains the data and code required to generate the materials for the article "A Phanerozoic gridded dataset of palaeogeographic reconstructions" (Jones and Domeier, 2024). 
 
 To cite the paper: 
 
-> Jones, L.A. and Domeier, M.M. 2024. A Phanerozoic gridded dataset for palaeogeographic reconstructions. (TBC).
+> Jones, L.A. and Domeier, M.M. 2024. A Phanerozoic gridded dataset for palaeogeographic reconstructions. *Scientific Data*, 11, 710. [https://doi.org/10.1038/s41597-024-03468-w](https://doi.org/10.1038/s41597-024-03468-w).
 
 To cite this repository:
 
 > Jones, L.A. and Domeier, M.M. 2024. A Phanerozoic gridded dataset for palaeogeographic reconstructions. GitHub Repository: https://github.com/LewisAJones/PhanGrids.
 
-#### NOTE: All reconstructions files are deposited on the dedicated [Zenodo repository](https://zenodo.org/records/10607398).
+#### NOTE: All reconstructions files are deposited on the dedicated [Zenodo repository](https://doi.org/10.5281/zenodo.10069221).
 
 ![](figures/grid_plot.png)
 Example of [H3’s discrete global grid system](https://h3geo.org). (a) A H3 global grid at resolution 2 (~316.12 km cell spacing). Land masses are depicted in grey, except for Brazil, which is depicted in purple. The grid is illustrated in a Lambert azimuthal equal-area projection. (b) H3 grids overlaid on Brazil at resolutions 2, 3, and 4, which have an average cell spacing of ~316 km, ~119 km, and ~45 km, respectively. The map illustrates the hierarchical nature of the H3 geospatial indexing system.
